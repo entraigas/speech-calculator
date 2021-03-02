@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 50px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Panel */
+
+.panel {
+  display: grid;
+  grid-template-columns: 6em 2em;
+  text-align: right;
+  height: 1.5em;
+  padding-top: 0.2em;
+}
+
+.panel img {
+  height: 1em;
+  margin: auto;
+}
+
+/* Keyboard */
+
+.buttons {
+  display: grid;
+  grid-template-columns: 2em 2em 2em 2em;
+  grid-template-rows: 2em 2em 2em 2em;
+  line-height: 2rem;
+}
+
+.buttons .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: inherit;
+  line-height: inherit;
+  background: inherit;
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s; /* Safari */
+}
+
+.btn:hover {
+  border: 1px solid #000000;
+}
+
+/* PressButton */
+
+#micButton {
+  margin: 30px;
+  width: 150px;
+  height: 150px;
+  background-color: #EEE;
+  border: 5px solid #111;
+  border-radius: 50%;
+  /* grow effect */
+  --scale-value: 1;
+  transform: scale3d(var(--scale-value), var(--scale-value), 1);
+  transition: transform cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#micButton:hover {
+  background-color: #CCC;
+  cursor: pointer;
+}
