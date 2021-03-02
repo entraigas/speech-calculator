@@ -76,7 +76,6 @@ const PressButton = ({ callback }) => {
   return (
     <div className='container'>
       <div ref={pressButtonElement} id='micButton' />
-      {transcript}
     </div>
   );
 };

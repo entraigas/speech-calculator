@@ -14,7 +14,12 @@ const allAllowedCharsRegex = new RegExp('^[0-9\\+-x\\/]+$');
 function App() {  
   useDidMount(() => {
     document.addEventListener('onSpeechRecognitionText', (evt) => {
-      const transcript = evt.detail.replaceAll(' ', '');
+      const transcript = evt.detail
+        .toLowerCase()
+        .replaceAll(' ', '')
+        .replaceAll('by','*')
+        .replaceAll('minus','-')
+        .replaceAll('divided','/');
       if (allAllowedCharsRegex.test(transcript)) {
         setText(transcript);
       }
